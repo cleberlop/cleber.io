@@ -4,7 +4,7 @@ var gulp = require('gulp'),
   watch = require('gulp-watch');
 
 var paths = {
-  sass: ['./assets/stylesheets/styles/sass/*.sass'],
+  sass: ['./assets/styles/sass/**/*.sass'],
   slim: ['./components/**/*.slim', './shared/**/*.slim'],
 };
 
@@ -17,10 +17,9 @@ gulp.task('watch', function() {
 // SASS
 
 gulp.task('sass', function(done) {
-  gulp.src('./assets/styles/sass/*.sass')
-    .pipe(sass())
-    .on('error', sass.logError)
-    .pipe(gulp.dest('./assets/styles/css'))
+  return gulp.src('./assets/styles/sass/application.sass')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./assets/styles/css/'))
 });
 
 // SLIM

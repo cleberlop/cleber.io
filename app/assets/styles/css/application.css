@@ -1,2 +1,40 @@
-.cleber {
-  color: red; }
+html {
+  font-family: "Montserrat", sans-serif; }
+
+.new-navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background: #27293d;
+  flex-direction: row;
+  z-index: 9999;
+  transition: top 0.2s ease-in-out !important; }
+  .new-navbar .left-nav {
+    height: 100%;
+    display: flex;
+    width: 33.33%;
+    align-items: center;
+    justify-content: flex-start; }
+    .new-navbar .left-nav .hamburger {
+      padding-left: 20px;
+      color: #a7a8a9;
+      cursor: pointer; }
+    .new-navbar .left-nav .left-logo-a {
+      padding-left: 20px; }
+  .new-navbar .center-nav {
+    height: 100%;
+    display: flex;
+    width: 33.33%;
+    align-items: center;
+    justify-content: center; }
+  .new-navbar .right-nav {
+    height: 100%;
+    display: flex;
+    width: 33.33%;
+    align-items: center; }
+  .new-navbar.nav-up {
+    top: -60px; }
